@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/342f0675-dd11-4d6f-9cbf-40d1347bb467)
 ---
 
 # PhotoHunt - Photo Search Engine
@@ -58,7 +58,9 @@
 
 ## Screenshots
 
-![PhotoHunt Search Screenshot](img2.jpg)
+![PhotoHunt Search Screenshot](Screenshot1.png)
+![PhotoHunt Result Screenshot](Screenshot2.png)
+
 
 ## License
 
