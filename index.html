@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Search Engine</title>
+    <title>PhotoHunt - Image Search Engine</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div>
-    <div class="navbar">
-        <h1 id="title">PhotoHunt</h1>
+    <div class="container">
+        <header class="navbar">
+            <h1 class="navbar__title">PhotoHunt</h1>
+        </header>
+        
+        <main class="search-section">
+            <form id="searchform" class="search-form">
+                <input type="text" id="searchbox" class="search-form__input" placeholder="Search for images...">
+                <button type="submit" class="search-form__button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+            <p class="search-info">Search for high-quality images from Unsplash</p>
+            
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading images...</p>
+            </div>
+            
+            <section class="results-section">
+                <div id="search-result" class="results-grid"></div>
+                <button id="showmore" class="load-more">
+                    <i class="fas fa-arrow-down"></i> Show More
+                </button>
+            </section>
+        </main>
     </div>
-   
-    <div>
-    <form id="searchform">
-        <input type="text" id="searchbox" placeholder="Search for Image">
-        <button type="submit">Search</button>
-    </form>
-    <div id="search-result"></div>
-    <button id="showmore" style="display: none;">Show More</button>
+    
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Download Image</h2>
+            <div class="download-options">
+                <div class="option">
+                    <h3>Small</h3>
+                    <p>640px width</p>
+                    <button class="download-btn" data-size="small">
+                        <i class="fas fa-download"></i> Download Small
+                    </button>
+                </div>
+                <div class="option">
+                    <h3>Medium</h3>
+                    <p>1080px width</p>
+                    <button class="download-btn" data-size="medium">
+                        <i class="fas fa-download"></i> Download Medium
+                    </button>
+                </div>
+                <div class="option">
+                    <h3>Large</h3>
+                    <p>1920px width</p>
+                    <button class="download-btn" data-size="large">
+                        <i class="fas fa-download"></i> Download Large
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-    <footer>
-        <p>Developed by Utkarsh</p>
-        <p>PhotoHunt &copy; 2024. All Rights Reserved.</p>
-        <p>Powered by <a href="https://unsplash.com" target="_blank">Unsplash API</a></p>
+    
+    <footer class="footer">
+        <div class="footer__content">
+            <p>Developed by Utkarsh</p>
+            <p>PhotoHunt &copy; 2024. All Rights Reserved.</p>
+            <p>Powered by <a href="https://unsplash.com" target="_blank" class="footer__link">Unsplash API</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
